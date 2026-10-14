@@ -1,53 +1,46 @@
-# Gerenciador de Países, Estados e Cidades
+# Countries, States, and Cities Manager
 
-Aplicação desktop em C# para cadastro e consulta de países, estados e cidades, com organização em entidades, controladores e acesso a dados.
+C# desktop application for managing and querying countries, states, and cities, featuring clear separation between entities, controllers, and data access layers.
 
-## Objetivo
+## Objective
+Practice object-oriented desktop development concepts and data persistence in a domain with hierarchical relationships.
 
-Praticar conceitos de desenvolvimento desktop orientado a objetos e persistência de dados em um domínio com relacionamentos hierárquicos.
+## Features
+- Registration of countries, states, and cities
+- Querying registered entities
+- Screen navigation powered by Windows Forms
+- Data access operations organized via Data Access Object (DAO) pattern
+- Separation of concerns among entities, controllers, and forms
 
-## Funcionalidades
-
-- Cadastro de países, estados e cidades
-- Consultas das entidades cadastradas
-- Navegação por telas do Windows Forms
-- Operações de acesso a dados organizadas por DAO
-- Separação entre entidades, controladores e formulários
-
-## Tecnologias
-
+## Technologies
 - C#
 - Windows Forms
 - .NET
 - SQL
 
-## Arquitetura
+## Architecture
 
-| Componente | Responsabilidade |
-| --- | --- |
-| `Paises.cs`, `Estados.cs`, `Cidades.cs` | Entidades do domínio |
-| `CtrlPaises.cs`, `CtrlEstados.cs`, `CtrlCidades.cs` | Regras de controle e orquestração |
-| `DaoPaises.cs`, `DaoEstados.cs`, `DaoCidades.cs` | Acesso a dados |
-| `Frm*.cs` | Interfaces de cadastro e consulta |
-| `SQLQuery*.sql` | Scripts SQL do projeto |
+| Component | Responsibility |
+| :--- | :--- |
+| `Paises.cs`, `Estados.cs`, `Cidades.cs` | Domain entities |
+| `CtrlPaises.cs`, `CtrlEstados.cs`, `CtrlCidades.cs` | Control rules and orchestration |
+| `DaoPaises.cs`, `DaoEstados.cs`, `DaoCidades.cs` | Data access layer |
+| `Frm*.cs` | Registration and query user interfaces |
+| `SQLQuery*.sql` | Project SQL scripts |
 
-## Como executar
+## How to Run
 
-1. Abra `ProjetoElp4Paises.sln` no Visual Studio.
+1. Open `ProjetoElp4Paises.sln` in Visual Studio.
+2. Configure the database connection according to the configuration file and SQL scripts in the repository.
+3. Build and run the project through the IDE.
 
-2. Configure a conexão com o banco de dados conforme o arquivo de configuração e os scripts SQL do repositório.
+## Key Learnings
+- Modeling relationships between entities.
+- Implementing layered architecture for desktop applications.
+- Building CRUD and query user interfaces with Windows Forms.
+- Integrating a C# application with a relational database.
 
-3. Compile e execute o projeto pela IDE.
-
-## Aprendizados
-
-- Modelagem de relacionamentos entre entidades.
-- Organização em camadas para aplicações desktop.
-- Criação de interfaces de cadastro e consulta com Windows Forms.
-- Integração de uma aplicação C# com banco de dados relacional.
-
-## Próximos passos
-
-- Centralizar a configuração de conexão em variáveis de ambiente.
-- Adicionar validações e tratamento de erros mais detalhados.
-- Criar testes para regras de negócio e acesso a dados.
+## Next Steps
+- Centralize connection configuration using environment variables.
+- Add more detailed input validations and error handling.
+- Write unit and integration tests for business logic and data access.
